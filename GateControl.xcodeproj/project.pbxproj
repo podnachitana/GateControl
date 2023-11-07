@@ -12,7 +12,42 @@
 		5B00D66C2AF40F3A007333E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B00D66B2AF40F3A007333E8 /* Assets.xcassets */; };
 		5B00D66F2AF40F3A007333E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B00D66E2AF40F3A007333E8 /* Preview Assets.xcassets */; };
 		5B00D6772AF40FE4007333E8 /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 5B00D6762AF40FE4007333E8 /* SimpleToast */; };
+		5B485C202AF952030015204B /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B485C1F2AF952030015204B /* WidgetKit.framework */; };
+		5B485C222AF952030015204B /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B485C212AF952030015204B /* SwiftUI.framework */; };
+		5B485C252AF952030015204B /* GateControlWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B485C242AF952030015204B /* GateControlWidgetBundle.swift */; };
+		5B485C272AF952030015204B /* GateControlWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B485C262AF952030015204B /* GateControlWidgetLiveActivity.swift */; };
+		5B485C292AF952030015204B /* GateControlWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B485C282AF952030015204B /* GateControlWidget.swift */; };
+		5B485C2B2AF952030015204B /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B485C2A2AF952030015204B /* AppIntent.swift */; };
+		5B485C2D2AF952040015204B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B485C2C2AF952040015204B /* Assets.xcassets */; };
+		5B485C312AF952040015204B /* GateControlWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5B485C1D2AF952030015204B /* GateControlWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5B485C372AF952B70015204B /* GateControlProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B485C362AF952B70015204B /* GateControlProvider.swift */; };
+		5B485C382AF952B70015204B /* GateControlProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B485C362AF952B70015204B /* GateControlProvider.swift */; };
+		5BF9CBE82AF8CD0500D5478A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF9CBE72AF8CD0500D5478A /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B485C2F2AF952040015204B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B00D65C2AF40F39007333E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B485C1C2AF952030015204B;
+			remoteInfo = GateControlWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5B485C322AF952040015204B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5B485C312AF952040015204B /* GateControlWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5B00D6642AF40F39007333E8 /* Gate Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gate Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,7 +55,18 @@
 		5B00D6692AF40F39007333E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5B00D66B2AF40F3A007333E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B00D66E2AF40F3A007333E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5B485C1D2AF952030015204B /* GateControlWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GateControlWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B485C1F2AF952030015204B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		5B485C212AF952030015204B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		5B485C242AF952030015204B /* GateControlWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateControlWidgetBundle.swift; sourceTree = "<group>"; };
+		5B485C262AF952030015204B /* GateControlWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateControlWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		5B485C282AF952030015204B /* GateControlWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateControlWidget.swift; sourceTree = "<group>"; };
+		5B485C2A2AF952030015204B /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
+		5B485C2C2AF952040015204B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B485C2E2AF952040015204B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B485C362AF952B70015204B /* GateControlProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GateControlProvider.swift; sourceTree = "<group>"; };
 		5BD52BD42AF43EF300BB93B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5BF9CBE72AF8CD0500D5478A /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +78,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5B485C1A2AF952030015204B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B485C222AF952030015204B /* SwiftUI.framework in Frameworks */,
+				5B485C202AF952030015204B /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -39,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				5B00D6662AF40F39007333E8 /* GateControl */,
+				5B485C232AF952030015204B /* GateControlWidget */,
+				5B485C1E2AF952030015204B /* Frameworks */,
 				5B00D6652AF40F39007333E8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				5B00D6642AF40F39007333E8 /* Gate Control.app */,
+				5B485C1D2AF952030015204B /* GateControlWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +117,7 @@
 				5B00D6692AF40F39007333E8 /* ContentView.swift */,
 				5B00D66B2AF40F3A007333E8 /* Assets.xcassets */,
 				5B00D66D2AF40F3A007333E8 /* Preview Content */,
+				5BF9CBE72AF8CD0500D5478A /* Launch Screen.storyboard */,
 			);
 			path = GateControl;
 			sourceTree = "<group>";
@@ -71,6 +130,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5B485C1E2AF952030015204B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B485C1F2AF952030015204B /* WidgetKit.framework */,
+				5B485C212AF952030015204B /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B485C232AF952030015204B /* GateControlWidget */ = {
+			isa = PBXGroup;
+			children = (
+				5B485C242AF952030015204B /* GateControlWidgetBundle.swift */,
+				5B485C262AF952030015204B /* GateControlWidgetLiveActivity.swift */,
+				5B485C282AF952030015204B /* GateControlWidget.swift */,
+				5B485C2A2AF952030015204B /* AppIntent.swift */,
+				5B485C2C2AF952040015204B /* Assets.xcassets */,
+				5B485C2E2AF952040015204B /* Info.plist */,
+				5B485C362AF952B70015204B /* GateControlProvider.swift */,
+			);
+			path = GateControlWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -81,10 +163,12 @@
 				5B00D6602AF40F39007333E8 /* Sources */,
 				5B00D6612AF40F39007333E8 /* Frameworks */,
 				5B00D6622AF40F39007333E8 /* Resources */,
+				5B485C322AF952040015204B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5B485C302AF952040015204B /* PBXTargetDependency */,
 			);
 			name = GateControl;
 			packageProductDependencies = (
@@ -93,6 +177,23 @@
 			productName = GateControl;
 			productReference = 5B00D6642AF40F39007333E8 /* Gate Control.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5B485C1C2AF952030015204B /* GateControlWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B485C352AF952040015204B /* Build configuration list for PBXNativeTarget "GateControlWidgetExtension" */;
+			buildPhases = (
+				5B485C192AF952030015204B /* Sources */,
+				5B485C1A2AF952030015204B /* Frameworks */,
+				5B485C1B2AF952030015204B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GateControlWidgetExtension;
+			productName = GateControlWidgetExtension;
+			productReference = 5B485C1D2AF952030015204B /* GateControlWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -105,6 +206,9 @@
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					5B00D6632AF40F39007333E8 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					5B485C1C2AF952030015204B = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
@@ -126,6 +230,7 @@
 			projectRoot = "";
 			targets = (
 				5B00D6632AF40F39007333E8 /* GateControl */,
+				5B485C1C2AF952030015204B /* GateControlWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -135,8 +240,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF9CBE82AF8CD0500D5478A /* Launch Screen.storyboard in Resources */,
 				5B00D66F2AF40F3A007333E8 /* Preview Assets.xcassets in Resources */,
 				5B00D66C2AF40F3A007333E8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B485C1B2AF952030015204B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B485C2D2AF952040015204B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,10 +263,31 @@
 			files = (
 				5B00D66A2AF40F39007333E8 /* ContentView.swift in Sources */,
 				5B00D6682AF40F39007333E8 /* GateControlApp.swift in Sources */,
+				5B485C372AF952B70015204B /* GateControlProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B485C192AF952030015204B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B485C252AF952030015204B /* GateControlWidgetBundle.swift in Sources */,
+				5B485C2B2AF952030015204B /* AppIntent.swift in Sources */,
+				5B485C382AF952B70015204B /* GateControlProvider.swift in Sources */,
+				5B485C272AF952030015204B /* GateControlWidgetLiveActivity.swift in Sources */,
+				5B485C292AF952030015204B /* GateControlWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B485C302AF952040015204B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B485C1C2AF952030015204B /* GateControlWidgetExtension */;
+			targetProxy = 5B485C2F2AF952040015204B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5B00D6702AF40F3A007333E8 /* Debug */ = {
@@ -207,6 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -264,6 +400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -277,6 +414,7 @@
 		5B00D6732AF40F3A007333E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -288,6 +426,7 @@
 				INFOPLIST_FILE = GateControl/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -310,6 +449,7 @@
 		5B00D6742AF40F3A007333E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -321,6 +461,7 @@
 				INFOPLIST_FILE = GateControl/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -337,6 +478,60 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		5B485C332AF952040015204B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5Q9FG8QR7K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GateControlWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GateControlWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = podnachitana.GateControl.GateControlWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B485C342AF952040015204B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5Q9FG8QR7K;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GateControlWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GateControlWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = podnachitana.GateControl.GateControlWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -357,6 +552,15 @@
 			buildConfigurations = (
 				5B00D6732AF40F3A007333E8 /* Debug */,
 				5B00D6742AF40F3A007333E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B485C352AF952040015204B /* Build configuration list for PBXNativeTarget "GateControlWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B485C332AF952040015204B /* Debug */,
+				5B485C342AF952040015204B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

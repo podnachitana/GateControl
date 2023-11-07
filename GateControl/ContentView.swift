@@ -13,7 +13,6 @@ struct SimpleButtonStyle: ButtonStyle {
 		configuration.label
 			.frame(maxWidth: 100, maxHeight: 100)
 			.padding(50)
-		//			.contentShape(Circle())
 			.background(
 				Group {
 					if configuration.isPressed {
@@ -47,6 +46,12 @@ struct ContentView: View {
 	
 	@State private var showToast = false
 	@State private var toastText = ""
+	private var errorColor = Color(#colorLiteral(red: 0.8554748893, green: 0.9081590772, blue: 0.8240712285, alpha: 1))
+	private var successColor = Color(#colorLiteral(red: 0.8301611543, green: 0.1263696253, blue: 0.2860267758, alpha: 0.865428394))
+	@State private var isError = false
+	
+	
+	
 	
 	private let toastOptions = SimpleToastOptions(
 		alignment: .top,
@@ -57,14 +62,17 @@ struct ContentView: View {
 	)
 	
 	
-	func getUsers() {
+	func openGate() {
+		
 		guard let url = URL(string: "http://gate.hingai.keenetic.pro/led2on") else { fatalError("Missing URL") }
 		
 		let urlRequest = URLRequest(url: url)
 		
+		
 		let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
 			if let error = error {
 				toastText = "Error: \(error.localizedDescription)"
+				isError = true
 				showToast.toggle()
 				return
 			}
@@ -75,10 +83,16 @@ struct ContentView: View {
 				guard let data = data else { return }
 				DispatchQueue.main.async {
 					do {
-						toastText = "Gate Open"
+						toastText = "The Gate is open"
+						isError = true
 						showToast.toggle()
 					}
 				}
+			}
+			else {
+				toastText = "Error: \(response.statusCode) - \(HTTPURLResponse.localizedString(forStatusCode: response.statusCode))"
+				isError = false
+				showToast.toggle()
 			}
 		}
 		dataTask.resume()
@@ -87,10 +101,10 @@ struct ContentView: View {
 	var body: some View {
 		
 		VStack(spacing: 40 ) {
-			Text("Home Gate Control").fontWeight(.ultraLight).multilineTextAlignment(.center).kerning(3).font(.custom("Copperplate", size: 30)).padding(.bottom, 150)
+			Text("Home Gate Control").fontWeight(.ultraLight).multilineTextAlignment(.center).kerning(3).font(.custom("Copperplate", size: 30)).padding(.bottom, 130)
 				.frame(maxWidth: .infinity, maxHeight: 100)
 			Button(action: {
-				getUsers()
+				openGate()
 			}, label: {
 				Image("barrier").renderingMode(.template)
 					.resizable()
@@ -104,11 +118,11 @@ struct ContentView: View {
 		
 		.simpleToast(isPresented: $showToast, options: toastOptions) {
 			HStack {
-				Image(systemName: "door.right.hand.closed")
+				//				Image(systemName: "door.garage.closed")
 				Text(toastText).bold()
 			}
-			.padding(20)
-			.background(Color(#colorLiteral(red: 0.4800988436, green: 0.5128529072, blue: 1, alpha: 0.3)))
+			.padding(40)
+			.background(isError ? errorColor : successColor)
 			.foregroundColor(Color.black)
 			.cornerRadius(14)
 		}
